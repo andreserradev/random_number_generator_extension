@@ -35,6 +35,8 @@
             min-height: 180px;
             padding: 0;
             width: 384px;
+            height: 200px;
+            border-radius: 100%;
         }
 
         h1 {
@@ -58,7 +60,6 @@
         }
 
         .modal-header {
-            align-items: center;
             border-bottom: 0.5px solid #dadada;
         }
 
@@ -66,25 +67,12 @@
             padding: 0;
         }
 
-        .modal-icon {
-            border-top: 0.5px solid #dadada;
-            height: 50px;
-            width: 100%;
-        }
 
         .logo {
             padding: 16px;
+            width: 100%;
         }
 
-        .logo-icon {
-            vertical-align: text-bottom;
-            margin-right: 12px;
-        }
-
-        .version {
-            color: #444;
-            font-size: 18px;
-        }
 
         .flex-container {
             display: flex;
@@ -109,8 +97,10 @@
 
         .currTimeTitle {
             font-weight: bold;
-            font-size: large;
-
+            font-size: xx-large;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: center;
         }
 
         .time {
@@ -124,6 +114,7 @@
             background-color: #19547e;
             width: 100%;
             height: 50px;
+            margin-bottom: 16px;
             border-radius: 100px;
             align-self: center;
             font-size: large;
@@ -149,23 +140,21 @@
             Number Generator
         </h1>
     </div>
-    <form>
-        <div class="row">
-            <div class="column">
-                <label class="formElements" for="minNumber">Min number:</label><br>
-                <input class="formElements" type="number" id="minNumber" name="fname" value=0><br>
-                <p></p>
-                <label class="formElements" for="maxNumber">Max number:</label><br>
-                <input class="formElements" type="number" id="maxNumber" name="lname" value=10><br><br>
-            </div>
-            <div class="column currTimeTitle" id="resultRandom">
-
-            </div>
+    <div class="row">
+        <div class="column">
+            <label class="formElements" for="minNumber">Min number:</label><br>
+            <input class="formElements" type="number" id="minNumber" name="fname" value=0><br>
+            <p></p>
+            <label class="formElements" for="maxNumber">Max number:</label><br>
+            <input class="formElements" type="number" id="maxNumber" name="lname" value=10><br><br>
         </div>
+        <div class="column currTimeTitle" id="resultRandom">
 
-        <input class="generatBtn" type="button" value="Generate" onclick="generateRandomnumber()">
         </div>
-    </form>
+    </div>
+
+    <input class="generatBtn" id="generateBtn" type="button" value="Generate">
+    </div>
 
     <script src="popup.js"></script>
 </body>
